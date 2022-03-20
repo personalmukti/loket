@@ -12,13 +12,16 @@
 					<div class="row">
 						<div class="col-md-6">
 							<div class="table-responsive">
-								<table class="table table-bordered">
+								<table id="lap-laporan" class="table table-bordered table-striped table-hover">
+									<thead>
 									<tr>
 										<th width="3px">No</th>
 										<th style="text-align: center;">Waktu</th>
 										<th width="130px">Jumlah Antrian</th>
 										<!-- <th width="10px" nowrap="">Aksi</th> -->
 									</tr>
+									</thead>
+									<tbody>
 									<?php
 $bulan=array("01" => "Januari", "02" => "Februari", "03" => "Maret",
 "04" => "April", "05" => "Mei", "06" => "Juni",
@@ -40,6 +43,7 @@ $bulan=array("01" => "Januari", "02" => "Februari", "03" => "Maret",
 										<!-- <td><a href="<?php echo site_url('admin/'); ?>" class="btn btn-info <?php echo $a; ?>">Hapus</a></td> -->
 									</tr>
 									<?php } ?>
+									</tbody>
 								</table>
 							</div>
 							<?php echo $halaman; ?>

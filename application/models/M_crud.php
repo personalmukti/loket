@@ -19,7 +19,7 @@ class M_crud extends CI_Model {
 		$sql = $this->db->get($table);
 		return $sql;
 	}
-	public function get_group_id($table, $group_by){
+	public function get_group_id($table, $group_by){			
 		$this->db->group_by($group_by);
 		$this->db->order_by($group_by." DESC");
 		$sql = $this->db->get($table);
