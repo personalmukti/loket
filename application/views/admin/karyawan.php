@@ -16,7 +16,8 @@
 							</center>
 							<br>
 							<div class="table-responsive">
-								<table class="table table-bordered">
+								<table id="lap-karyawan" class="table table-bordered">
+                  <thead>
 									<tr>
 										<th width="3px">No</th>
 										<th width="200px;">Nama Karyawan</th>
@@ -25,6 +26,8 @@
                     <th>username</th>
 										<th width="110px">Aksi</th>
 									</tr>
+                  </thead>
+                  <tbody>
 									<?php
 									$no=0;
 									foreach ($hasil as $row) { 
@@ -114,6 +117,7 @@
 </div>
 
 									<?php } ?>
+                  </tbody>
 								</table>
 							</div>
 							<?php echo $halaman; ?>

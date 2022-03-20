@@ -16,13 +16,16 @@
 							</center>
 							<br>
 							<div class="table-responsive">
-								<table class="table table-bordered">
+								<table id="lap-agenda" class="table table-bordered">
+									<thead>
 									<tr>
 										<th width="3px">No</th>
 										<th style="text-align: center;">Nama Agenda</th>
-										<th width="130px">Gambar</th>
+										<th width="50px">Gambar</th>
 										<th width="110px">Aksi</th>
 									</tr>
+									</thead>
+									<tbody>
 									<?php
 									$no=0;
 									foreach ($hasil as $row) { 
@@ -76,6 +79,7 @@
 
 
 									<?php } ?>
+									</tbody>
 								</table>
 							</div>
 							<?php echo $halaman; ?>

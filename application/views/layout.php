@@ -17,10 +17,12 @@ if ($this->session->userdata('level') == 'Penjaga') {
 	<title>Loket <?php echo $instansi->instansi; ?></title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.css'); ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/loket.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/datatables.min.css'); ?>">
 	<link rel="icon" type="icon" href="<?php echo base_url('media/' . $instansi->logo); ?>">
 
 	<script type="text/javascript" src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js'); ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets/datatables.min.js'); ?>"></script>
 </head>
 
 <body>
@@ -59,21 +61,21 @@ if ($this->session->userdata('level') == 'Penjaga') {
 
 	<footer>
 		<div class="row">
-			<div class="col-md-8">
+			<!-- <div class="col-md-8">
 				<marquee class="footer" onmouseover="stop();" onmouseout="start()">
 					<?php
 					foreach ($text_jalan as $text) { ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<img src="<?php echo base_url('media/agenda/' . $text->img); ?>" height="20">&nbsp;&nbsp;<?php echo $text->text;
 																										} ?>
 				</marquee>
-			</div>
-			<div class="col-md-4">
+			</div> -->
+			<div class="col">
 				<?php
 				if (empty($this->session->userdata('level'))) { ?>
 					<a class="footer" href="<?php echo site_url('welcome/login/'); ?>">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo (ENVIRONMENT === 'development') ? '</strong>' : '' ?></a>
 					<a class="footer" href="<?php echo site_url('welcome/antrian/'); ?>">Nomer Antrian</a>
 				<?php } else { ?>
-					<p class="footer">Repost by <a href="https://stokcoding.com/" title="StokCoding.com" target="_blank">StokCoding.com</a> | Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo (ENVIRONMENT === 'development') ? '</strong>' : '' ?></p>
+					<!-- <p class="footer">Repost by <a href="https://stokcoding.com/" title="StokCoding.com" target="_blank">StokCoding.com</a> | Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo (ENVIRONMENT === 'development') ? '</strong>' : '' ?></p> -->
 				<?php }
 				?>
 			</div>
@@ -83,3 +85,12 @@ if ($this->session->userdata('level') == 'Penjaga') {
 </body>
 
 </html>
+
+<script>
+	$(document).ready( function () {
+		$('#lap-agenda').DataTable();
+		$('#lap-karyawan').DataTable();
+		$('#lap-loket').DataTable();
+		$('#lap-laporan').DataTable();
+	} );
+</script>
