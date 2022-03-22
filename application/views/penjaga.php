@@ -163,7 +163,7 @@ else{ ?>
 				;document.getElementById("suarabelnomorurut").currentTime=0;
 				document.getElementById("suarabelnomorurut").play();
 			}, totalWaktu);
-			totalWaktu=totalWaktu+1000;
+			totalWaktu=totalWaktu+2000;
 
 			<?php
 			if($antrian < 10){ ?>
@@ -172,7 +172,7 @@ else{ ?>
 					document.getElementById("antrian").currentTime=0;
 					document.getElementById("antrian").play();
 				}, totalWaktu);
-				totalWaktu=totalWaktu+1000;
+				totalWaktu=totalWaktu+2000;
 			<?php }
 			elseif($antrian == 10){ ?>
 				setTimeout(function(){
@@ -180,7 +180,7 @@ else{ ?>
 					document.getElementById("sepuluh").currentTime=0;
 					document.getElementById("sepuluh").play();
 				}, totalWaktu);
-				totalWaktu=totalWaktu+1000;
+				totalWaktu=totalWaktu+2000;
 			<?php }
 
 			elseif($antrian == 11){ ?>
@@ -189,7 +189,7 @@ else{ ?>
 					document.getElementById("sebelas").currentTime=0;
 					document.getElementById("sebelas").play();
 				}, totalWaktu);
-				totalWaktu=totalWaktu+1000;
+				totalWaktu=totalWaktu+2000;
 			
 			<?php } 
 
@@ -200,14 +200,14 @@ else{ ?>
 					document.getElementById("antrian").currentTime=0;
 					document.getElementById("antrian").play();
 				}, totalWaktu);
-				totalWaktu=totalWaktu+1000;
+				totalWaktu=totalWaktu+2000;
 
 				setTimeout(function(){
 					document.getElementById("belas").pause();
 					document.getElementById("belas").currentTime=0;
 					document.getElementById("belas").play();
 				}, totalWaktu);
-				totalWaktu=totalWaktu+1000;
+				totalWaktu=totalWaktu+2000;
 			
 			<?php }
 
@@ -218,14 +218,14 @@ else{ ?>
 					document.getElementById("antrian").currentTime=0;
 					document.getElementById("antrian").play();
 				}, totalWaktu);
-				totalWaktu=totalWaktu+800;
+				totalWaktu=totalWaktu+1000;
 
 				setTimeout(function(){
 					document.getElementById("puluh").pause();
 					document.getElementById("puluh").currentTime=0;
 					document.getElementById("puluh").play();
 				}, totalWaktu);
-				totalWaktu=totalWaktu+1000;
+				totalWaktu=totalWaktu+2000;
 			
 			<?php }
 			else if($antrian > 20 && $antrian < 100){ 
@@ -235,7 +235,7 @@ else{ ?>
 					document.getElementById("antrian").currentTime=0;
 					document.getElementById("antrian").play();
 				}, totalWaktu);
-				totalWaktu=totalWaktu+800;
+				totalWaktu=totalWaktu+1000;
 
 				setTimeout(function(){
 					document.getElementById("puluh").pause();
@@ -249,7 +249,7 @@ else{ ?>
 					document.getElementById("antrian1").currentTime=0;
 					document.getElementById("antrian1").play();
 				}, totalWaktu);
-				totalWaktu=totalWaktu+800;
+				totalWaktu=totalWaktu+1000;
 		<?php
 		}
 		else if($antrian == 100){ ?>
@@ -519,7 +519,7 @@ else{ ?>
 							document.getElementById('diloket').play();
 						}, totalwaktu);
 			
-			totalwaktu=totalwaktu+1000;
+			totalwaktu=totalwaktu+2000;
 			setTimeout(function() {
 							document.getElementById('loket<?php echo $loket->loket; ?>').pause();
 							document.getElementById('loket<?php echo $loket->loket; ?>').currentTime=0;

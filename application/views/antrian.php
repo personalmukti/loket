@@ -5,6 +5,7 @@
 			<div class="box">
 				<div class="loket">
 					Nomer Antrian Anda
+				
 				</div>
 				<div class="agenda">
 					<h1 id="nomer"><?php echo $antrian->row('no_antrian'); 
@@ -20,6 +21,7 @@
 							<a href="<?php echo site_url('welcome/tambah_antrian/'.$antri); ?>" class="btn btn-primary"><i class="glyphicon glyphicon-save"></i> &nbsp;Dapatkan Nomer Antrian</a>
 						</center>
 					<br>
+					<div ></div>
 				</div>
 			</div>
 		</div>
