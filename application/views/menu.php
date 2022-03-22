@@ -2,10 +2,10 @@
 if($this->session->userdata('level') == 'Penjaga')
 {
  echo "<ul style='float:left;'>
-			<li>Hi ".$this->session->userdata('nama')."</li>
+			<li class='btn btn-info'>Hi ".$this->session->userdata('nama')."</li>
 		</ul>
 		<ul>
-			<li><a href='".site_url('welcome/logout')."'>Logout</a></li>
+			<li><a href='".site_url('welcome/logout')."' class='btn btn-warning'>Logout</a></li>
 		</ul>";
 
 			//<li><a href='".site_url('penjaga/')."'>Pilih Loket</a></li>

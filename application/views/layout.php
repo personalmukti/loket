@@ -30,7 +30,7 @@ if ($this->session->userdata('level') == 'Penjaga') {
 		<div class="row">
 			<div class="col-md-2 col-sm-4 col-xs-4">
 				<div id="logo">
-					<img src="<?php echo base_url('media/' . $instansi->logo); ?>" class="img" onclick="window.location='<?php echo site_url($site); ?>'">
+					<img src="<?php echo base_url('media/' . $instansi->logo); ?>" class="img" onclick="window.location='<?php echo site_url($site); ?>'" height='50%'>
 				</div>
 			</div>
 			<div class="col-md-8">
@@ -73,7 +73,7 @@ if ($this->session->userdata('level') == 'Penjaga') {
 				<?php
 				if (empty($this->session->userdata('level'))) { ?>
 					<a class="footer" href="<?php echo site_url('welcome/login/'); ?>">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo (ENVIRONMENT === 'development') ? '</strong>' : '' ?></a>
-					<a class="footer" href="<?php echo site_url('welcome/antrian/'); ?>">Nomer Antrian</a>
+					<a class="footer btn btn-warning" href="<?php echo site_url('welcome/antrian/'); ?>">Nomer Antrian</a>
 				<?php } else { ?>
 					<!-- <p class="footer">Repost by <a href="https://stokcoding.com/" title="StokCoding.com" target="_blank">StokCoding.com</a> | Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo (ENVIRONMENT === 'development') ? '</strong>' : '' ?></p> -->
 				<?php }
